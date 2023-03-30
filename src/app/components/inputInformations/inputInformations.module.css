@@ -1,0 +1,44 @@
+.informationInputs {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  height: 15.75rem;
+  color: var(--gray-200);
+}
+
+.informationInputs input {
+  width: 100%;
+  background-color: var(--gray-900);
+  height: 3rem;
+  border-radius: 0.25rem;
+  border: transparent;
+}
+
+.cardInformation input:hover {
+  border: 0.094rem solid var(--brand-color);
+}
+
+.cardNumber {
+  display: flex;
+  flex-direction: column;
+}
+
+.holderName {
+  display: flex;
+  flex-direction: column;
+}
+
+.expirationCvv {
+  display: flex;
+  gap: 1rem;
+}
+
+.expirationDate {
+  display: flex;
+  flex-direction: column;
+}
+
+.cvv {
+  display: flex;
+  flex-direction: column;
+}
