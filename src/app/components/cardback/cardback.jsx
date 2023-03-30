@@ -6,14 +6,14 @@ const sourceSansPro = Source_Sans_Pro({
   weight: ["400", "600"],
 });
 
-const Cardback = () => {
+const Cardback = ({ inputCvv }) => {
   return (
     <div className={styles.cardback}>
       <div className={styles.magneticBand}></div>
       <div className={styles.cvvAutomatic}>
         <p className={styles.cvvBackCode}>***</p>
         <p className={`${sourceSansPro.className} ${styles.cvvBackWrite}`}>
-          CVV
+          {inputCvv}
         </p>
       </div>
     </div>

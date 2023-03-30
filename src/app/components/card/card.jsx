@@ -11,7 +11,7 @@ const sourceSansPro = Source_Sans_Pro({
   weight: ["400", "600"],
 });
 
-const Card = () => {
+const Card = ({ inputNumber, inputName, inputExpirationDate }) => {
   return (
     <div className={styles.card}>
       <div className={styles.headerCard}>
@@ -25,17 +25,20 @@ const Card = () => {
         <Image className={styles.elo} src={elo} width={32} height={32} />
         <Image src={contactless} width={24} height={24} />
       </div>
-      <p className={`${styles.automaticNumberCard} ${sourceSansPro.className}`}>
-        4716 8039 02** ****
+      <p
+        id="automaticNumberCard"
+        className={`${styles.automaticNumberCard} ${sourceSansPro.className}`}
+      >
+        {inputNumber}
       </p>
       <div className={styles.footerCard}>
         <p className={`${styles.automaticName} ${sourceSansPro.className}`}>
-          Seu nome aqui
+          {inputName}
         </p>
         <p
           className={`${styles.automaticExpiration} ${sourceSansPro.className}`}
         >
-          **/**
+          {inputExpirationDate}
         </p>
       </div>
     </div>
