@@ -28,51 +28,6 @@
   flex-direction: row;
 }
 
-.informationInputs {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  height: 15.75rem;
-  color: var(--gray-200);
-}
-
-.informationInputs input {
-  width: 100%;
-  background-color: var(--gray-900);
-  height: 3rem;
-  border-radius: 0.25rem;
-  border: transparent;
-}
-
-.cardInformation input:hover {
-  border: 0.094rem solid var(--brand-color);
-}
-
-.cardNumber {
-  display: flex;
-  flex-direction: column;
-}
-
-.holderName {
-  display: flex;
-  flex-direction: column;
-}
-
-.expirationCvv {
-  display: flex;
-  gap: 1rem;
-}
-
-.expirationDate {
-  display: flex;
-  flex-direction: column;
-}
-
-.cvv {
-  display: flex;
-  flex-direction: column;
-}
-
 .rightSide {
   display: flex;
   flex-direction: column;
@@ -94,34 +49,6 @@
   color: var(--gray-50);
 }
 
-.addButton {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem 3rem;
-  gap: 0.5rem;
-
-  width: 42rem;
-  height: 3.5rem;
-
-  background: var(--brand-color);
-  box-shadow: 0rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
-  border-radius: 0.25rem;
-  border: transparent;
-
-  color: var(--gray-50);
-  font-weight: 600;
-  font-size: 1.125rem;
-  line-height: 1.5rem;
-
-  cursor: pointer;
-}
-
-.addButton:hover {
-  background: var(--brand-color-light);
-}
-
 @media only screen and (max-width: 850px) {
   .cardInformation {
     flex-direction: column;
@@ -132,16 +59,10 @@
   .rightSide {
     margin: 0;
   }
-  .addButton {
-    width: auto;
-  }
 }
 
 @media only screen and (max-width: 450px) {
   .container {
     padding: 0.625rem;
-  }
-  .card {
-    width: 14.5rem;
   }
 }

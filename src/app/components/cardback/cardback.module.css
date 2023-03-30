@@ -1,6 +1,6 @@
 .cardback {
   position: relative;
-  display: flex;
+  display: none;
   flex-direction: column;
   width: 17.5rem;
   height: 10.5rem;
