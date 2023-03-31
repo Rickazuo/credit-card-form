@@ -12,10 +12,13 @@
   height: 3rem;
   border-radius: 0.25rem;
   border: transparent;
+  padding: 0.625rem;
+
+  color: var(--gray-50);
 }
 
-.cardInformation input:hover {
-  border: 0.094rem solid var(--brand-color);
+.informationInputs input:focus {
+  outline: 0.0625rem solid var(--brand-color);
 }
 
 .cardNumber {

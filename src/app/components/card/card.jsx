@@ -11,18 +11,23 @@ const sourceSansPro = Source_Sans_Pro({
   weight: ["400", "600"],
 });
 
-const Card = ({ inputNumber, inputName, inputExpirationDate }) => {
+const Card = ({ inputNumber, inputName, inputExpirationDate, cardFlag }) => {
   return (
     <div className={styles.card}>
       <div className={styles.headerCard}>
-        <Image className={styles.visa} src={visa} width={32} height={32} />
-        <Image
-          className={styles.mastercard}
-          src={mastercard}
-          width={32}
-          height={32}
-        />
-        <Image className={styles.elo} src={elo} width={32} height={32} />
+        {cardFlag == "visa" ? (
+          <Image className={styles.visa} src={visa} width={32} height={32} />
+        ) : cardFlag == "mastercard" ? (
+          <Image
+            className={styles.mastercard}
+            src={mastercard}
+            width={32}
+            height={32}
+          />
+        ) : (
+          <Image className={styles.elo} src={elo} width={32} height={32} />
+        )}
+
         <Image src={contactless} width={24} height={24} />
       </div>
       <p
