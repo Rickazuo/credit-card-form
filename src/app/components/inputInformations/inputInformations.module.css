@@ -12,6 +12,9 @@
   height: 3rem;
   border-radius: 0.25rem;
   border: transparent;
+  padding: 0.625rem;
+
+  color: var(--gray-50);
 }
 
 .cardInformation input:hover {

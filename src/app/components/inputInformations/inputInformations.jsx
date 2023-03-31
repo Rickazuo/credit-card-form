@@ -1,5 +1,4 @@
 "use client";
-import { useState } from "react";
 import { Source_Sans_Pro } from "next/font/google";
 import styles from "./inputInformations.module.css";
 
@@ -29,6 +28,14 @@ const InputInformations = ({
           className={styles.inputNumber}
           type="text"
           id="numeroCartao"
+          maxLength="25"
+          pattern="[0-9]*"
+          onInput={(e) => {
+            e.target.value = e.target.value.replace(/[^\d]/g, "").slice(0, 16);
+            const numbers = e.target.value.match(/\d{1,4}/g);
+            const formattedValue = numbers && numbers.join(" - ");
+            e.target.value = formattedValue || "";
+          }}
         />
       </div>
       <div className={styles.holderName}>
@@ -42,6 +49,7 @@ const InputInformations = ({
           className={styles.inputName}
           type="text"
           id="nomeTitular"
+          maxLength="28"
         />
       </div>
       <div className={styles.expirationCvv}>
@@ -56,6 +64,16 @@ const InputInformations = ({
             className={styles.inputExpirationDate}
             type="text"
             id="validade"
+            maxLength="5"
+            onInput={(e) => {
+              e.target.value = e.target.value.replace(/[^\d]/g, "").slice(0, 4);
+              const month = e.target.value.slice(0, 2);
+              const year = e.target.value.slice(2, 4);
+              if (month.length === 2 && !e.target.value.endsWith("/")) {
+                e.target.value = `${month}/${year}`;
+              }
+            }}
+            placeholder="MM/YY"
           />
         </div>
         <div className={styles.cvv}>
@@ -67,10 +85,16 @@ const InputInformations = ({
             value={inputCvv}
             onChange={(e) => onChange(e)}
             className={styles.inputCvv}
-            type="text"
+            type="number"
             id="cvv"
+            maxLength="3"
             onFocus={() => setCardFront(false)}
             onBlur={() => setCardFront(true)}
+            onInput={(e) => {
+              e.target.value = Math.max(0, parseInt(e.target.value))
+                .toString()
+                .slice(0, 3);
+            }}
           />
         </div>
       </div>

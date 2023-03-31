@@ -26,11 +26,11 @@
 }
 
 .mastercard {
-  display: none;
+  display: initial;
 }
 
 .elo {
-  display: none;
+  display: initial;
 }
 
 .automaticNumberCard {

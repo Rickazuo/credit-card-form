@@ -11,9 +11,9 @@ const Cardback = ({ inputCvv }) => {
     <div className={styles.cardback}>
       <div className={styles.magneticBand}></div>
       <div className={styles.cvvAutomatic}>
-        <p className={styles.cvvBackCode}>***</p>
+        <p className={styles.cvvBackCode}>{inputCvv}</p>
         <p className={`${sourceSansPro.className} ${styles.cvvBackWrite}`}>
-          {inputCvv}
+          CVV
         </p>
       </div>
     </div>

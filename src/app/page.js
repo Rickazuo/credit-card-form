@@ -21,11 +21,28 @@ export default function Home() {
   const [inputExpirationDate, setInputExpirationDate] = useState("");
   const [inputCvv, setInputCvv] = useState("");
   const [cardFront, setCardFront] = useState(true);
+  const [cardFlag, setCardFlag] = useState("visa");
+
+  function getCardFlag(twoDigits) {
+    switch (true) {
+    case twoDigits <= 33:
+      return "visa";
+    case twoDigits > 33 && twoDigits <= 66:
+      return "mastercard";
+    case twoDigits > 66 && twoDigits <= 99:
+      return "elo";
+    }
+  }
 
   function onChange(e) {
     const { name, value } = e.target;
-    if (name == "inputNumber") setInputNumber(value);
-    else if (name == "inputName") setInputName(value);
+    if (name == "inputNumber") {
+      if (inputNumber.length >= 2)
+        setCardFlag(
+          getCardFlag(parseInt(`${inputNumber[0]}${inputNumber[1]}`))
+        );
+      setInputNumber(value);
+    } else if (name == "inputName") setInputName(value);
     else if (name == "inputExpirationDate") setInputExpirationDate(value);
     else if (name == "inputCvv") setInputCvv(value);
   }
@@ -48,6 +65,7 @@ export default function Home() {
                 inputNumber={inputNumber}
                 inputName={inputName}
                 inputExpirationDate={inputExpirationDate}
+                cardFlag={cardFlag}
               />
             ) : (
               <Cardback inputCvv={inputCvv} />
