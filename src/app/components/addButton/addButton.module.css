@@ -14,16 +14,43 @@
   border-radius: 0.25rem;
   border: transparent;
 
+  cursor: pointer;
+}
+
+.addButton:disabled {
+  opacity: 0.5;
+  cursor: auto;
+}
+
+.pButton {
+  display: initial;
   color: var(--gray-50);
   font-weight: 600;
   font-size: 1.125rem;
   line-height: 1.5rem;
-
-  cursor: pointer;
 }
 
 .addButton:hover {
   background: var(--brand-color-light);
+}
+
+.imgLoading {
+  background-position: center;
+  background-repeat: no-repeat;
+
+  animation-name: loading;
+  animation-duration: 2s;
+  animation-iteration-count: 5s;
+  animation-timing-function: initial;
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @media only screen and (max-width: 850px) {

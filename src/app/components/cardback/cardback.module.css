@@ -11,6 +11,8 @@
   border: 0.0625rem solid var(--gray-700);
   box-shadow: 0rem 0.25rem 1.5rem rgba(0, 0, 0, 0.25);
   border-radius: 1rem;
+
+  animation: flipCard 1s ease-in-out;
 }
 
 .magneticBand {
@@ -54,4 +56,13 @@
   text-align: right;
 
   color: var(--gray-200);
+}
+
+@keyframes flipCard {
+  from {
+    transform: rotateY(90deg);
+  }
+  to {
+    transform: rotateY(0deg);
+  }
 }

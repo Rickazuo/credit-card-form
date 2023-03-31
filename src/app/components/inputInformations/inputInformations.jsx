@@ -33,7 +33,7 @@ const InputInformations = ({
           onInput={(e) => {
             e.target.value = e.target.value.replace(/[^\d]/g, "").slice(0, 16);
             const numbers = e.target.value.match(/\d{1,4}/g);
-            const formattedValue = numbers && numbers.join(" - ");
+            const formattedValue = numbers && numbers.join(" ");
             e.target.value = formattedValue || "";
           }}
         />
@@ -85,7 +85,7 @@ const InputInformations = ({
             value={inputCvv}
             onChange={(e) => onChange(e)}
             className={styles.inputCvv}
-            type="number"
+            type="text"
             id="cvv"
             maxLength="3"
             onFocus={() => setCardFront(false)}
