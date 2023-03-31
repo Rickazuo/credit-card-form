@@ -48,7 +48,7 @@ Dependendo do número de cartão digitado, será detectado a bandeira do cartão
 A animação de virar o cartão, acontece quando o CVV fica em focus
 
 
-_<h2 align="center" ><a href="https://kanban-boracodar.vercel.app" target="_blank">Visite o projeto online</a></h2>_
+_<h2 align="center" ><a href="https://credit-card-form-chi.vercel.app" target="_blank">Visite o projeto online</a></h2>_
 
 ## 🔖 Layout
 
