@@ -14,7 +14,7 @@
 <br>
 
 <p align="center" id="-layout">
-  <img alt="credit card gif" src="./src/app/assets/kanban.gif" width="100%">
+  <img alt="credit card gif" src="./public/creditCardForm.gif" width="100%">
 </p>
 
 ## 🚀 Tecnologias
@@ -37,7 +37,7 @@ O projeto _Cartão de crédito_ foi realizado como parte do #13 desafio #BORACOD
   Funcionalidades
 </h1>
 
-O desafio foi a criação de um form de cartão de crédito além do layout proposto disponível em  <a href="#-layout-figma">Layout</a>, algumas animações e interações.
+O desafio foi a criação de um form de cartão de crédito além do layout proposto disponível em <a href="#-layout-figma">Layout</a>, algumas animações e interações.
 
 ### Preenchendo os campos
 
@@ -46,7 +46,6 @@ Dependendo do número de cartão digitado, será detectado a bandeira do cartão
 ### Animação
 
 A animação de virar o cartão, acontece quando o CVV fica em focus
-
 
 _<h2 align="center" ><a href="https://credit-card-form-chi.vercel.app" target="_blank">Visite o projeto online</a></h2>_
 
